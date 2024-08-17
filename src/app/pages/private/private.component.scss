@@ -1,0 +1,37 @@
+.sidenav {
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    z-index: 100;
+    transition: all 0.5s ease;
+    box-shadow: 10px 0px 10px -10px rgba(1, 41, 112, 0.1);
+    background-color: #fff;
+}
+
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.layout {
+    display: flex;
+    margin-top: 60px;
+}
+
+.main {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 260px;
+    transition: all 0.5s ease;
+}
+
+.offSideNav {
+    transform: translateX(-260px);
+}
+
+.offMain {
+    transform: translateX(-260px);
+}

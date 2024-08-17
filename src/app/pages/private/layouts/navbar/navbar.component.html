@@ -1,0 +1,63 @@
+<div class="header fixed-top d-flex align-items-center">
+  <!-- Logo -->
+  <a class="logo d-flex align-items-center">
+    <img
+      src="https://placehold.co/300x100"
+      alt="Logo"
+      class="img-fluid d-none d-md-block"
+    />
+    <button class="btn" (click)="toggleSidenav()">
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </button>
+  </a>
+  <!-- End Logo -->
+
+  <!-- Contenido central -->
+  <div class="d-flex align-items-center flex-grow-1 justify-content-end">
+    <!-- Perfil -->
+    <nav class="header-nav">
+      <ul class="d-flex align-items-center mb-0">
+        <li class="nav-item dropdown">
+          <!-- Icono de imagen de perfil -->
+          <a
+            class="nav-link nav-profile d-flex align-items-center"
+            data-bs-toggle="dropdown"
+          >
+            <img
+              src="https://placehold.co/100x100"
+              alt="Profile"
+              class="rounded-circle"
+            />
+            <span class="d-none d-md-block ms-2">Jesus Garizao</span>
+            <i class="bi bi-chevron-down ms-2"></i>
+          </a>
+
+          <!-- Menú de perfil -->
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                routerLink="/manager/user/profile"
+                ><i class="bi bi-person me-2"></i>Mi Perfil</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center"
+                ><i class="bi bi-question-circle me-2"></i>¿Necesitas ayuda?</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a
+                class="dropdown-item d-flex align-items-center"
+                routerLink="/public/login"
+                ><i class="bi bi-box-arrow-right me-2"></i>Cerrar sesión</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
