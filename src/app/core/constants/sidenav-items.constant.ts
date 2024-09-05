@@ -12,7 +12,7 @@ export const SIDENAV_ITEMS: SidenavItemInterface[] = [
     id: 'user',
     name: 'Usuarios',
     icon: 'bi bi-people-fill',
-    routerLink: '/manager/admin/all',
+    routerLink: '/manager/user',
     children: [],
   },
 ];

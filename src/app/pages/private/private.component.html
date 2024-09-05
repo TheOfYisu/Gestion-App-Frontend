@@ -1,20 +1,25 @@
 <!-- Loading -->
-@if (loading) {
-<app-loading></app-loading>
-}
-<!-- End Loading -->
 
-@if (!loading) {
+<ngx-spinner
+  bdColor="rgba(0, 0, 0, 0.8)"
+  size="medium"
+  color="#fff"
+  type="square-jelly-box"
+  [fullScreen]="true"
+  ><p style="color: white">Loading...</p></ngx-spinner
+>
+
+<!-- End Loading -->
 
 <!-- ====== Navbar ====== -->
 <div id="navbar" class="navbar">
-  <app-navbar></app-navbar>
+  <app-navbar [dataUser]="dataUser"></app-navbar>
 </div>
 <!-- ===== End Navbar ===== -->
 <section class="layout">
   <!-- ======= Sidenav ======= -->
   <aside id="sidenav" class="sidenav" [ngClass]="{ offSideNav: !sidenav }">
-    <app-sidenav></app-sidenav>
+    <app-sidenav [dataUser]="dataUser"></app-sidenav>
   </aside>
   <!-- ===== End Sidenav ===== -->
 
@@ -24,4 +29,3 @@
   </main>
   <!-- ====== End Main ====== -->
 </section>
-}

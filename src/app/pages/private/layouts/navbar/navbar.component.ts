@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { GeneralService } from '../../../../core/services/general.service';
+import { DataInterface } from '../../../../core/interfaces/data.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,12 @@ import { GeneralService } from '../../../../core/services/general.service';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  @Input() dataUser: DataInterface = {
+    name: '',
+    lastname: '',
+    id: 0,
+    roles: [],
+  };
   private sidenav: boolean = true;
 
   constructor(private generalService: GeneralService) {

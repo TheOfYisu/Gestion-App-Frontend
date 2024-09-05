@@ -5,6 +5,8 @@ import { SidenavComponent } from './layouts/sidenav/sidenav.component';
 import { NavbarComponent } from './layouts/navbar/navbar.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { GeneralService } from '../../core/services/general.service';
+import { NgxSpinnerModule, NgxSpinnerService } from 'ngx-spinner';
+import { DataInterface } from '../../core/interfaces/data.interface';
 
 @Component({
   selector: 'app-private',
@@ -14,22 +16,29 @@ import { GeneralService } from '../../core/services/general.service';
     RouterModule,
     SidenavComponent,
     NavbarComponent,
-    LoadingComponent,
+    NgxSpinnerModule,
   ],
   templateUrl: './private.component.html',
   styleUrl: './private.component.scss',
 })
 export class PrivateComponent implements OnInit {
   private title = 'Manager';
-
-  loading: boolean = false;
+  dataUser: DataInterface = {
+    name: '',
+    lastname: '',
+    id: 0,
+    roles: [],
+  };
   sidenav: boolean;
 
-  constructor(private generalService: GeneralService) {
+  constructor(
+    private generalService: GeneralService,
+    private spinner: NgxSpinnerService
+  ) {
     this.generalService.setTitle(this.title);
     this.sidenav = window.innerWidth > 768;
+    this.getDataUser();
     this.getSidenav();
-    this.getLoading();
   }
 
   ngOnInit(): void {}
@@ -43,10 +52,17 @@ export class PrivateComponent implements OnInit {
     }
   }
 
-  getLoading() {
-    this.generalService.isloading$.subscribe((value) => {
-      this.loading = value;
-    });
+  getDataUser() {
+    this.spinner.show();
+    this.generalService.dataUser.subscribe(
+      (res) => {
+        this.dataUser = res.data;
+        this.spinner.hide();
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 
   getSidenav() {
