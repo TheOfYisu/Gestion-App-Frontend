@@ -1,5 +1,7 @@
 <div class="navbar navbar-expand-lg navbar-light bg-white px-5">
-  <a class="navbar-brand"><span class="fw-bolder">Gestion App</span></a>
+  <a class="navbar-brand" routerLink="/"
+    ><span class="fw-bolder">Gestion App</span></a
+  >
   <button
     class="navbar-toggler"
     type="button"
@@ -11,19 +13,48 @@
   >
     <span class="navbar-toggler-icon"></span>
   </button>
-  <nav class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+  <nav class="collapse navbar-collapse" id="navbarSupportedContent" #navbar>
+    <ul class="nav nav-underline ms-auto mb-2 mb-lg-0">
       <li class="nav-item">
-        <a class="nav-link nav-text" routerLink="/">Inicio</a>
+        <a
+          class="nav-link nav-text"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          ariaCurrentWhenActive="page"
+          routerLink="/"
+          (click)="collapseNavbar(navbar)"
+          >Inicio</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link nav-text" routerLink="service">Servicios</a>
+        <a
+          class="nav-link nav-text"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          routerLink="service"
+          (click)="collapseNavbar(navbar)"
+          >Servicios</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link nav-text" routerLink="contact">Contactenos</a>
+        <a
+          class="nav-link nav-text"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          routerLink="contact"
+          (click)="collapseNavbar(navbar)"
+          >Contactenos</a
+        >
       </li>
       <li class="nav-item">
-        <a class="nav-link nav-login" routerLink="login">Inicio de Sesion</a>
+        <a
+          class="nav-link nav-text"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          routerLink="login"
+          (click)="collapseNavbar(navbar)"
+          >Inicio de Sesion</a
+        >
       </li>
     </ul>
   </nav>

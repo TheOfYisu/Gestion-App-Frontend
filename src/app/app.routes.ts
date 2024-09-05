@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { publicroutes } from './pages/public/public.routes';
 import { PublicComponent } from './pages/public/public.component';
-import { NotFoundComponent } from './pages/public/layout/not-found/not-found.component';
+import { NotFoundComponent } from './pages/public/components/not-found/not-found.component';
 
 export const routes: Routes = [
   {
