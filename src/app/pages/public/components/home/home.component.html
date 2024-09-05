@@ -24,10 +24,7 @@
 </div>
 <div class="container-2">
   <div class="row row-container-2">
-    <div
-      class="col-12 col-lg-5 card-row"
-      style="color: #000000; background-color: #f4f4f4"
-    >
+    <div class="col-12 col-lg-5 card-row service">
       <div class="title-card">
         Optimiza Horarios Laborales con Nuestros Servicios.
       </div>
@@ -41,16 +38,14 @@
         <button
           class="button-card"
           style="color: #ffffff; background-color: #1090cb"
+          [routerLink]="['/service']"
         >
           Servicios
         </button>
       </div>
     </div>
     <div class="col-12 col-lg-2"></div>
-    <div
-      class="col-12 col-lg-5 card-row"
-      style="color: #ffffff; background-color: #1090cb"
-    >
+    <div class="col-12 col-lg-5 card-row contact">
       <div class="title-card">¡Contáctanos para más información!</div>
       <div class="text-card">
         ¿Necesitas asistencia o tienes preguntas? Estamos aquí para ayudarte.
@@ -62,6 +57,7 @@
         <button
           class="button-card"
           style="color: #000000; background-color: #ffffff"
+          [routerLink]="['/contact']"
         >
           ¡Contáctanos!
         </button>

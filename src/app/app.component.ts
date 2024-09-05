@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { NotFoundComponent } from './pages/public/layout/not-found/not-found.component';
+import { NotFoundComponent } from './pages/public/components/not-found/not-found.component';
 
 @Component({
   selector: 'app-root',

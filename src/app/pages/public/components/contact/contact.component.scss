@@ -1,8 +1,7 @@
 .container-1 {
-  background-color: #e8f4fa;
+  background-image: linear-gradient(to bottom, #ffffff, #a2caea);
   width: 100%;
-  border-top: 2px solid #d2d2d2;
-  border-bottom: 2px solid #d2d2d2;
+
 
   .container-row {
     padding: 5% 8% 0 8%;
@@ -26,8 +25,10 @@
       line-height: 189.5%;
       color: #777777;
     }
+
     .container-1-img {
       padding-top: 10%;
+
     }
   }
 
@@ -48,7 +49,7 @@
 
       .icon-redes {
         font-size: 25px;
-        color: black;
+        color: #000000;
         margin-right: 3%;
         margin-left: 3%;
         padding: 5px 10px 6px 10px;
@@ -88,12 +89,15 @@
 }
 
 .container-2 {
+  background-color: #a2caea;
+
   .form-contact {
     padding: 5% 6% 0% 6%;
 
     .form-control {
       height: 50px;
       border-radius: 5px;
+      border: #000000 solid 1px;
     }
 
     .form-label {
@@ -102,7 +106,7 @@
       font-size: 14px;
       line-height: 175.4%;
       letter-spacing: -0.3px;
-      color: #4f4f4f;
+      color: #323232;
     }
 
     .form-control-complete {
@@ -113,18 +117,23 @@
       height: 200px;
     }
 
-    .button-login {
+    .button {
+      border: #000000 solid 1px;
       margin-top: 5%;
       background-color: #1090cb;
-      border: none;
       padding: 7px 40px 7px 40px;
-      color: #ffffff;
+      color: #ffff;
       border-radius: 8px;
-      font-style: normal;
       font-weight: 450;
       font-size: 15px;
     }
+
+    .button:hover {
+      background-color: #000000;
+      box-shadow: #000000 0px 1px 1px;
+    }
   }
+
   .map-location {
     border-radius: 65px;
     height: 100%;
