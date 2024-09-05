@@ -1,0 +1,34 @@
+<table class="table table-striped">
+  <thead>
+    <tr class="justify-content-center text-center">
+      @for (item of header_table; track item) {
+      <th scope="col">{{ item }}</th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of users; track user.name) {
+    <tr class="justify-content-center text-center">
+      <!-- <th scope="row">{{ i + 1 }}</th> -->
+      <td>
+        {{ user.dni }}
+      </td>
+      <td>
+        <img
+          [src]="'https://placehold.co/100x100'"
+          [alt]="user.id"
+          class="me-2 rounded-circle"
+        />
+      </td>
+      <td>{{ user.name }} {{ user.lastname }}</td>
+      <td>
+        {{ user.email }}
+      </td>
+      <td></td>
+      <td>
+        <button class="btn btn-primary">Mas información</button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
